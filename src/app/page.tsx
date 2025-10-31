@@ -1,12 +1,7 @@
-
-// app/page.tsx
 "use client";
-
 import { useRouter } from "next/navigation";
-
 export default function LandingPage() {
   const router = useRouter();
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50">
       <h1 className="text-4xl font-bold mb-6">Welcome to My Todo App</h1>

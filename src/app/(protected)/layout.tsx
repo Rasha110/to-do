@@ -77,7 +77,7 @@ export default function ProtectedLayout({
             </button>
 
             {menuOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg py-2 z-50">
+              <div className="absolute right-0 mt-2 w-55 bg-white border rounded-lg shadow-lg py-2 z-50">
                 <div className="px-4 py-2 border-b">
                   <p className="text-sm font-medium">
                     {user.email?.split("@")[0]}

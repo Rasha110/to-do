@@ -74,7 +74,7 @@ export default function ProfileSettings() {
   
     setIsLoading(true);
   
-    // 1️⃣ Update Auth user metadata
+    // 1️Update Auth user metadata
     const { error: authError } = await supabase.auth.updateUser({
       data: { full_name: name, avatar_url: avatarUrl },
       email,
@@ -102,7 +102,7 @@ export default function ProfileSettings() {
       return;
     }
   
-    // 3️⃣ Update local state
+    //  Update local state
     setUser({ ...user, email, user_metadata: { full_name: name, avatar_url: avatarUrl } });
     setIsLoading(false);
     alert("Profile updated successfully!");

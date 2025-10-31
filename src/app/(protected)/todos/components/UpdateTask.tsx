@@ -20,18 +20,12 @@ export default function UpdateTask({ task, tasks, setTasks }: UpdateTaskProps) {
     if (!title.trim()) return;
 
     setLoading(true);
-    const { error } = await supabase
-      .from("todos")
-      .update({ title })
-      .eq("id", task.id);
+    const { error } = await supabase.from("todos").update({ title }).eq("id", task.id);
 
     if (error) {
       console.error("Error updating task:", error.message);
     } else {
-      // Update local state
-      setTasks(
-        tasks.map((t) => (t.id === task.id ? { ...t, title } : t))
-      );
+      setTasks(tasks.map((t) => (t.id === task.id ? { ...t, title } : t)));
       setIsEditing(false);
     }
     setLoading(false);
@@ -45,26 +39,29 @@ export default function UpdateTask({ task, tasks, setTasks }: UpdateTaskProps) {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="border p-1 rounded text-black"
+            className="border p-1 rounded text-black outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <Button onClick={handleUpdate} className="bg-green-500 p-1 rounded text-white">
-            Save
+
+
+          <Button onClick={handleUpdate} variant="primary" size="sm"  className="p-1">
+            {loading ? "Saving..." : "Save"}
           </Button>
+
+      
           <Button
             onClick={() => {
               setIsEditing(false);
               setTitle(task.title);
             }}
-            className="bg-gray-500 p-1 rounded text-white"
+            variant="secondary"
+            className="p-1"
+            size="sm"
           >
             Cancel
           </Button>
         </>
       ) : (
-        <Button
-          onClick={() => setIsEditing(true)}
-          className="bg-yellow-500 p-1 rounded text-white"
-        >
+        <Button onClick={() => setIsEditing(true)} variant="primary" size="sm" className="p-1">
           Edit
         </Button>
       )}
