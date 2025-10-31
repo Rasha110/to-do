@@ -3,11 +3,12 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase-client";
+import { User } from "@supabase/supabase-js";
 
 export default function ProfileSettings() {
   const router = useRouter();
-  const [user, setUser] = useState<any>(null);
-  const [name, setName] = useState("");
+  const [user, setUser] = useState<User | null>(null);
+    const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -102,7 +103,7 @@ export default function ProfileSettings() {
       return;
     }
   
-    //  Update local state
+  
     setUser({ ...user, email, user_metadata: { full_name: name, avatar_url: avatarUrl } });
     setIsLoading(false);
     alert("Profile updated successfully!");

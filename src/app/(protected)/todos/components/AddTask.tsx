@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { supabase } from "@/lib/supabase-client";
@@ -38,6 +39,29 @@ export default function AddTask({ tasks, setTasks }: AddTaskProps) {
       console.log("Task added:", newTask);
     }
   };
+  useEffect(() => {
+    const channel = supabase
+      .channel("todos-inserts")
+      .on(
+        "postgres_changes",
+        {
+          event: "INSERT",
+          schema: "public",
+          table: "todos",
+        },
+        (payload) => {
+          const newTask = payload.new as Task;
+          setTasks((prev) => [newTask, ...prev]);
+          console.log("Realtime task added:", newTask);
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [setTasks]);
+
   return (
     <form
       onSubmit={handleSubmit(async (data) => {

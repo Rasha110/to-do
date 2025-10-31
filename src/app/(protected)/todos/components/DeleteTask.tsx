@@ -3,7 +3,7 @@ import { Trash2 } from "lucide-react";
 import Button from "./Buttons";
 import type { Task } from "@/lib/type";
 import { supabase } from "@/lib/supabase-client";
-
+import { useEffect } from "react";
 type Props = {
   task: Task;
   tasks: Task[];
@@ -16,6 +16,28 @@ const DeleteTask: React.FC<Props> = ({ task, tasks, setTasks }) => {
     setTasks(tasks.filter((t) => t.id !== task.id));
     console.log("Task deleted:", task);
   };
+  useEffect(() => {
+    const channel = supabase
+      .channel("todos-deletes")
+      .on(
+        "postgres_changes",
+        {
+          event: "DELETE",
+          schema: "public",
+          table: "todos",
+        },
+        (payload) => {
+          const deletedTask = payload.old as Task;
+          setTasks((prev) => prev.filter((t) => t.id !== deletedTask.id));
+          console.log("Realtime task deleted:", deletedTask);
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel); // Clean up subscription on unmount
+    };
+  }, [setTasks]);
 
   return (
     <Button

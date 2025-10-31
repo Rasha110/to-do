@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from "react";
 import React, { useState } from "react";
 import { supabase } from "@/lib/supabase-client";
 import Button from "./Buttons";
@@ -30,6 +30,32 @@ export default function UpdateTask({ task, tasks, setTasks }: UpdateTaskProps) {
     }
     setLoading(false);
   };
+
+  useEffect(() => {
+    const channel = supabase
+      .channel("todos-updates")
+      .on(
+        "postgres_changes",
+        {
+          event: "UPDATE",
+          schema: "public",
+          table: "todos",
+        },
+        (payload) => {
+          const updatedTask = payload.new as Task;
+          setTasks((prev) =>
+            prev.map((t) => (t.id === updatedTask.id ? updatedTask : t))
+          );
+          console.log("Realtime task updated:", updatedTask);
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [setTasks]);
+
 
   return (
     <div className="ml-2 flex items-center gap-2">

@@ -22,7 +22,7 @@ export default function AuthForm({ mode }: AuthFormProps) {
       
         email,
         password,
-        options: { data: { full_name: name } },      });
+        options: { data: { full_name: name } },   });
       if (error) setError(error.message);
       else router.push("/todos");
     } else {

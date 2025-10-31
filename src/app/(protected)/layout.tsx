@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase-client";
 import { CheckCircle2, LogOut, User } from "lucide-react";
+import type { User as SupabaseUser } from "@supabase/supabase-js";
 
 export default function ProtectedLayout({
   children,
@@ -11,7 +12,8 @@ export default function ProtectedLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
-  const [user, setUser] = useState<any>(null);
+
+  const [user, setUser] = useState<SupabaseUser | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Check auth status
