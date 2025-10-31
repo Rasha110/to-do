@@ -28,7 +28,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center py-10 px-4">
       <div className="max-w-2xl w-full space-y-8">
-        {/* Progress Section */}
+        
         <section className="bg-white rounded-xl shadow-md p-6">
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
             Your Progress
