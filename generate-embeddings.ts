@@ -4,9 +4,9 @@
 import OpenAI from "openai";
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = "https://spaukuioxtvmqgokrumc.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNwYXVrdWlveHR2bXFnb2tydW1jIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MTY1MDY3OSwiZXhwIjoyMDc3MjI2Njc5fQ.qYne-Hu5YjUYmAzAjWlLJR62yOoUs4uw23Ozp-lYQ-I";
-const openaiKey = "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";
+const supabaseUrl =process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseKey = process.env.SERVICE_ROLE_KEY!;
+const openaiKey = "process.env.OPENAI_API_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 const openai = new OpenAI({ apiKey: openaiKey });
