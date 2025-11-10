@@ -1,0 +1,2934 @@
+[00:00:01.842] Server  LOG      ✓ Ready in 1255ms
+[00:00:04.256] Server  ERROR    ⨯ ./src/app/components/todo/DeleteTask.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import Button from "../common/Button";
+  4 | import type { Task } from "../../lib/type";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useEffect } from "react";
+  7 | type Props = {
+  8 |   task: Task;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./src/app/components/todo/TaskList.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import React from "react";
+  4 | import { Check } from "lucide-react";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useRouter } from "next/navigation";
+  7 | import type { Task } from "../../lib/type";
+  8 | import DeleteTask from "./DeleteTask";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./src/app/components/todo/UpdateTask.tsx:4:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  2 | import { useEffect } from "react";
+  3 | import React, { useState } from "react";
+> 4 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Button from "../common/Button";
+  6 | import type { Task } from "../../lib/type";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./src/app/(protected)/layout.tsx:5:1
+Module not found: Can't resolve '../lib/supabase-client'
+  3 | import { useState, useEffect } from "react";
+  4 | import { useRouter } from "next/navigation";
+> 5 | import { supabase } from "../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+  7 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+  8 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:05.475] Browser ERROR   uncaughtError: Error: ./src/app/components/todo/DeleteTask.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import Button from "../common/Button";
+  4 | import type { Task } from "../../lib/type";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useEffect } from "react";
+  7 | type Props = {
+  8 |   task: Task;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:06.398] Browser ERROR   ./src/app/components/todo/DeleteTask.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import Button from "../common/Button";
+  4 | import type { Task } from "../../lib/type";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useEffect } from "react";
+  7 | type Props = {
+  8 |   task: Task;
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/components/todo/TaskList.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import React from "react";
+  4 | import { Check } from "lucide-react";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useRouter } from "next/navigation";
+  7 | import type { Task } from "../../lib/type";
+  8 | import DeleteTask from "./DeleteTask";
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/components/todo/UpdateTask.tsx:4:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  2 | import { useEffect } from "react";
+  3 | import React, { useState } from "react";
+> 4 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Button from "../common/Button";
+  6 | import type { Task } from "../../lib/type";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/(protected)/layout.tsx:5:1
+Module not found: Can't resolve '../lib/supabase-client'
+  3 | import { useState, useEffect } from "react";
+  4 | import { useRouter } from "next/navigation";
+> 5 | import { supabase } from "../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+  7 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+  8 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/components/todo/DeleteTask.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import Button from "../common/Button";
+  4 | import type { Task } from "../../lib/type";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useEffect } from "react";
+  7 | type Props = {
+  8 |   task: Task;
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/components/todo/TaskList.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import React from "react";
+  4 | import { Check } from "lucide-react";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useRouter } from "next/navigation";
+  7 | import type { Task } from "../../lib/type";
+  8 | import DeleteTask from "./DeleteTask";
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/components/todo/UpdateTask.tsx:4:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  2 | import { useEffect } from "react";
+  3 | import React, { useState } from "react";
+> 4 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Button from "../common/Button";
+  6 | import type { Task } from "../../lib/type";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/(protected)/layout.tsx:5:1
+Module not found: Can't resolve '../lib/supabase-client'
+  3 | import { useState, useEffect } from "react";
+  4 | import { useRouter } from "next/navigation";
+> 5 | import { supabase } from "../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+  7 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+  8 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.398] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:22.987] Server  ERROR    ⨯ ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:23.023] Server  ERROR    ⨯ ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:23.165] Browser ERROR   uncaughtError: Error: ./src/app/components/todo/DeleteTask.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import Button from "../common/Button";
+  4 | import type { Task } from "../../lib/type";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useEffect } from "react";
+  7 | type Props = {
+  8 |   task: Task;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/DeleteTask.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import Button from "../common/Button";
+  4 | import type { Task } from "../../lib/type";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useEffect } from "react";
+  7 | type Props = {
+  8 |   task: Task;
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/TaskList.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import React from "react";
+  4 | import { Check } from "lucide-react";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useRouter } from "next/navigation";
+  7 | import type { Task } from "../../lib/type";
+  8 | import DeleteTask from "./DeleteTask";
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/UpdateTask.tsx:4:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  2 | import { useEffect } from "react";
+  3 | import React, { useState } from "react";
+> 4 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Button from "../common/Button";
+  6 | import type { Task } from "../../lib/type";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/(protected)/layout.tsx:5:1
+Module not found: Can't resolve '../lib/supabase-client'
+  3 | import { useState, useEffect } from "react";
+  4 | import { useRouter } from "next/navigation";
+> 5 | import { supabase } from "../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+  7 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+  8 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/DeleteTask.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import Button from "../common/Button";
+  4 | import type { Task } from "../../lib/type";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useEffect } from "react";
+  7 | type Props = {
+  8 |   task: Task;
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/TaskList.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import React from "react";
+  4 | import { Check } from "lucide-react";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useRouter } from "next/navigation";
+  7 | import type { Task } from "../../lib/type";
+  8 | import DeleteTask from "./DeleteTask";
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/UpdateTask.tsx:4:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  2 | import { useEffect } from "react";
+  3 | import React, { useState } from "react";
+> 4 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Button from "../common/Button";
+  6 | import type { Task } from "../../lib/type";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/(protected)/layout.tsx:5:1
+Module not found: Can't resolve '../lib/supabase-client'
+  3 | import { useState, useEffect } from "react";
+  4 | import { useRouter } from "next/navigation";
+> 5 | import { supabase } from "../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+  7 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+  8 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/DeleteTask.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import Button from "../common/Button";
+  4 | import type { Task } from "../../lib/type";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useEffect } from "react";
+  7 | type Props = {
+  8 |   task: Task;
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/DeleteTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/TaskList.tsx:5:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  3 | import React from "react";
+  4 | import { Check } from "lucide-react";
+> 5 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useRouter } from "next/navigation";
+  7 | import type { Task } from "../../lib/type";
+  8 | import DeleteTask from "./DeleteTask";
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/UpdateTask.tsx:4:1
+Module not found: Can't resolve '../../lib/supabase-client'
+  2 | import { useEffect } from "react";
+  3 | import React, { useState } from "react";
+> 4 | import { supabase } from "../../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Button from "../common/Button";
+  6 | import type { Task } from "../../lib/type";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component Browser]
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/UpdateTask.tsx [Client Component SSR]
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/(protected)/layout.tsx:5:1
+Module not found: Can't resolve '../lib/supabase-client'
+  3 | import { useState, useEffect } from "react";
+  4 | import { useRouter } from "next/navigation";
+> 5 | import { supabase } from "../lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+  7 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+  8 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:23.340] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:50.266] Server  ERROR    ⨯ ./src/app/(protected)/todos/page.tsx:3:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  1 | "use client";
+  2 | import { useEffect, useMemo, useState } from "react";
+> 3 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import AddTask from "../../components/todo/AddTask";
+  5 | import TaskList from "../../components/todo/TaskList";
+  6 | import type { Task } from "../../lib/type";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.267] Server  ERROR    ⨯ ./src/app/(protected)/todos/page.tsx:3:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  1 | "use client";
+  2 | import { useEffect, useMemo, useState } from "react";
+> 3 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import AddTask from "../../components/todo/AddTask";
+  5 | import TaskList from "../../components/todo/TaskList";
+  6 | import type { Task } from "../../lib/type";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.269] Server  ERROR    ⨯ ./src/app/(protected)/todos/page.tsx:3:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  1 | "use client";
+  2 | import { useEffect, useMemo, useState } from "react";
+> 3 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import AddTask from "../../components/todo/AddTask";
+  5 | import TaskList from "../../components/todo/TaskList";
+  6 | import type { Task } from "../../lib/type";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.270] Server  ERROR    ⨯ ./src/app/(protected)/todos/page.tsx:3:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  1 | "use client";
+  2 | import { useEffect, useMemo, useState } from "react";
+> 3 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import AddTask from "../../components/todo/AddTask";
+  5 | import TaskList from "../../components/todo/TaskList";
+  6 | import type { Task } from "../../lib/type";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.275] Server  ERROR    ⨯ ./src/app/components/todo/AddTask.tsx:5:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  3 | import { useForm } from "react-hook-form";
+  4 | import { yupResolver } from "@hookform/resolvers/yup";
+> 5 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import {schema} from "../../lib/schema/schema"
+  7 | import Button from "../common/Button";
+  8 | import type { Task } from "../../lib/type";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/AddTask.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/AddTask.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.277] Server  ERROR    ⨯ ./src/app/components/todo/AddTask.tsx:5:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  3 | import { useForm } from "react-hook-form";
+  4 | import { yupResolver } from "@hookform/resolvers/yup";
+> 5 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import {schema} from "../../lib/schema/schema"
+  7 | import Button from "../common/Button";
+  8 | import type { Task } from "../../lib/type";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/AddTask.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/AddTask.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.282] Server  ERROR    ⨯ ./src/app/components/todo/AddTask.tsx:5:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  3 | import { useForm } from "react-hook-form";
+  4 | import { yupResolver } from "@hookform/resolvers/yup";
+> 5 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import {schema} from "../../lib/schema/schema"
+  7 | import Button from "../common/Button";
+  8 | import type { Task } from "../../lib/type";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/AddTask.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/AddTask.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.295] Server  ERROR    ⨯ ./src/app/components/todo/AddTask.tsx:5:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  3 | import { useForm } from "react-hook-form";
+  4 | import { yupResolver } from "@hookform/resolvers/yup";
+> 5 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import {schema} from "../../lib/schema/schema"
+  7 | import Button from "../common/Button";
+  8 | import type { Task } from "../../lib/type";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/AddTask.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/AddTask.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.296] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.298] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.301] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.304] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:50.305] Server  ERROR    ⨯ ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:51.399] Browser ERROR   ./src/app/(protected)/todos/page.tsx:3:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  1 | "use client";
+  2 | import { useEffect, useMemo, useState } from "react";
+> 3 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import AddTask from "../../components/todo/AddTask";
+  5 | import TaskList from "../../components/todo/TaskList";
+  6 | import type { Task } from "../../lib/type";
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:51.399] Browser ERROR   ./src/app/components/todo/AddTask.tsx:5:1
+Module not found: Can't resolve '../../lib/schema/supabase-client'
+  3 | import { useForm } from "react-hook-form";
+  4 | import { yupResolver } from "@hookform/resolvers/yup";
+> 5 | import { supabase } from "../../lib/schema/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import {schema} from "../../lib/schema/schema"
+  7 | import Button from "../common/Button";
+  8 | import type { Task } from "../../lib/type";
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/AddTask.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/AddTask.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:51.399] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:51.399] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:51.742] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:51.745] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:51.749] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:51.760] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:51.761] Server  ERROR    ⨯ ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:52.396] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:52.396] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:57.915] Server  ERROR    ⨯ ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:58.039] Browser ERROR   uncaughtError: Error: ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:58.181] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:58.181] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:58.181] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:58.181] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:58.181] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:37.397] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:37.397] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:37.397] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:37.397] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:37.397] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:35.067] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:35.068] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:41.066] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:15:41.067] Browser ERROR   ./src/app/layout.tsx:2:1
+Module not found: Can't resolve './globals.css'
+  1 | // app/layout.tsx
+> 2 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "My Todo App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:15.660] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:16:15.665] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:16:15.668] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:16:15.685] Server  ERROR    ⨯ ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:16:15.688] Server  LOG      ✓ Compiled in 1842ms
+[00:16:16.066] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:18.066] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:25.170] Browser ERROR   uncaughtError: Error: ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:16:25.356] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:16:25.356] Browser ERROR   ./src/app/components/todo/TaskList.tsx:11:1
+Module not found: Can't resolve './DialogNotes'
+   9 | import UpdateTask from "./UpdateTask";
+  10 | import Button from "../common/Button";
+> 11 | import DialogNotes from "./DialogNotes"; 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | type Props = {
+  14 |   tasks: Task[];
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/todo/TaskList.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Client Component Browser]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/components/todo/TaskList.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Client Component SSR]
+    ./src/app/(protected)/todos/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:17:25.877] Server  LOG      ✓ Compiled in 604ms
+[00:17:26.175] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:17.577] Server  LOG      ✓ Compiled in 227ms
+[00:23:10.035] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:21.108] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:31.975] Server  ERROR    ⨯ ./src/app/(protected)/profile/profile-settings/page.tsx:4:1
+Module not found: Can't resolve '@/app/lib/supabase-client'
+  2 |
+  3 | import React, { useState, useEffect, ChangeEvent } from "react";
+> 4 | import { supabase } from "@/app/lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useRouter } from "next/navigation";
+  6 | import { User } from "@supabase/supabase-js";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component Browser]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component SSR]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:32.041] Browser ERROR   ./src/app/(protected)/profile/profile-settings/page.tsx:4:1
+Module not found: Can't resolve '@/app/lib/supabase-client'
+  2 |
+  3 | import React, { useState, useEffect, ChangeEvent } from "react";
+> 4 | import { supabase } from "@/app/lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useRouter } from "next/navigation";
+  6 | import { User } from "@supabase/supabase-js";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component Browser]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component SSR]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:33:32.061] Server  ERROR    ⨯ ./src/app/(protected)/profile/profile-settings/page.tsx:4:1
+Module not found: Can't resolve '@/app/lib/supabase-client'
+  2 |
+  3 | import React, { useState, useEffect, ChangeEvent } from "react";
+> 4 | import { supabase } from "@/app/lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useRouter } from "next/navigation";
+  6 | import { User } from "@supabase/supabase-js";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component Browser]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component SSR]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:32.380] Browser ERROR   uncaughtError: Error: ./src/app/(protected)/profile/profile-settings/page.tsx:4:1
+Module not found: Can't resolve '@/app/lib/supabase-client'
+  2 |
+  3 | import React, { useState, useEffect, ChangeEvent } from "react";
+> 4 | import { supabase } from "@/app/lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useRouter } from "next/navigation";
+  6 | import { User } from "@supabase/supabase-js";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component Browser]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component SSR]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:32.566] Browser ERROR   ./src/app/(protected)/profile/profile-settings/page.tsx:4:1
+Module not found: Can't resolve '@/app/lib/supabase-client'
+  2 |
+  3 | import React, { useState, useEffect, ChangeEvent } from "react";
+> 4 | import { supabase } from "@/app/lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useRouter } from "next/navigation";
+  6 | import { User } from "@supabase/supabase-js";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component Browser]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component SSR]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:33:32.566] Browser ERROR   ./src/app/(protected)/profile/profile-settings/page.tsx:4:1
+Module not found: Can't resolve '@/app/lib/supabase-client'
+  2 |
+  3 | import React, { useState, useEffect, ChangeEvent } from "react";
+> 4 | import { supabase } from "@/app/lib/supabase-client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useRouter } from "next/navigation";
+  6 | import { User } from "@supabase/supabase-js";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component Browser]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Client Component SSR]
+    ./src/app/(protected)/profile/profile-settings/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:33:54.239] Server  LOG      ✓ Compiled in 109ms
+[00:33:55.041] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:22.028] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.033] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.042] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.044] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.051] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.054] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.057] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.059] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.065] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.067] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.069] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.075] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.080] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.092] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.095] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.099] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.102] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.105] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.107] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.111] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.119] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.122] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.123] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.131] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.138] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.141] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.145] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.154] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.160] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.162] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.171] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.182] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.193] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.196] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.206] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.223] Server  ERROR    ⨯ ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:22.230] Server  LOG      ✓ Compiled in 158ms
+[00:34:23.065] Browser ERROR   ./src/app/(protected)/layout.tsx:7:1
+Module not found: Can't resolve './todo/ChatBot'
+   5 | import { supabase } from "../lib/supabase-client";
+   6 | import { CheckCircle2, LogOut, User } from "lucide-react";
+>  7 | import { TodoChatbot } from "./todo/ChatBot"; // adjust path if needed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import type { User as SupabaseUser } from "@supabase/supabase-js";
+   9 |
+  10 | export default function ProtectedLayout({
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(protected)/layout.tsx [Client Component Browser]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(protected)/layout.tsx [Client Component SSR]
+    ./src/app/(protected)/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:56.211] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:01.644] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[00:35:01.644] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[00:35:50.668] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:38:01.728] Server  LOG      ✓ Compiled in 0ms
+[00:38:02.005] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:38:53.238] Server  LOG      ✓ Compiled in 172ms
+[00:38:53.554] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:01.789] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[00:39:01.789] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[00:39:21.021] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[00:39:21.021] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[01:21:17.070] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[01:21:17.088] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[01:40:36.407] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:40:39.235] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[01:40:39.235] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[01:47:24.575] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[01:47:24.576] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:02:26.582] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:02:26.583] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:02:30.450] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:02:30.451] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:05:48.870] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:05:50.764] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:05:50.764] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:18:24.204] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:18:27.120] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:18:27.121] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:19:51.484] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:19:53.392] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:19:53.392] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:21:01.785] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:21:01.785] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:36:27.079] Server  LOG      ✓ Compiled in 248ms
+[02:49:57.266] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[02:49:57.268] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[03:13:03.090] Server  LOG      ✓ Compiled in 166ms
+[03:44:39.084] Server  LOG      ✓ Compiled in 672ms
+[03:44:42.173] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[03:44:42.173] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
