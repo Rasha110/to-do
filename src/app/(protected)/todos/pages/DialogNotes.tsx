@@ -35,7 +35,7 @@ const DialogNotes: React.FC<DialogNotesProps> = ({ task, setTasks }) => {
       return;
     }
 
-    // Update  UI 
+    // Update local UI immediately
     setTasks(prevTasks =>
       prevTasks.map(t => (t.id === task.id ? { ...t, notes } : t))
     );

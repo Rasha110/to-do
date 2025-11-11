@@ -1172,6 +1172,10 @@
     cursor: not-allowed;
   }
 
+  .disabled\:bg-blue-300:disabled {
+    background-color: var(--color-blue-300);
+  }
+
   .disabled\:bg-gray-300:disabled {
     background-color: var(--color-gray-300);
   }

@@ -12,7 +12,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
 
-// Generate embedding
+//  Generate embedding
 async function generateEmbedding(text: string): Promise<number[]> {
   try {
     const response = await fetch("https://api.openai.com/v1/embeddings", {
@@ -27,8 +27,7 @@ async function generateEmbedding(text: string): Promise<number[]> {
       }),
     });
 
-    if (!response.ok) throw new Error(`Embedding failed: ${response.statusText}`);
-    const data = await response.json();
+    const data = response.ok ? await response.json() : { data: [{ embedding: [] }] };
     return data.data?.[0]?.embedding ?? [];
   } catch (err) {
     console.error("Embedding error:", err);
@@ -55,36 +54,44 @@ async function callOpenAI(systemPrompt: string, userQuery: string): Promise<stri
     }),
   });
 
-  if (!response.ok) throw new Error(`OpenAI failed: ${response.statusText}`);
-  const data = await response.json();
-  return data.choices[0].message.content;
+  const data = response.ok ? await response.json() : null;
+  return data?.choices?.[0]?.message?.content ?? 
+    (() => { throw new Error(`OpenAI error: ${response.statusText}`); })();
 }
 
+//  Create json response
 const jsonResponse = (body: any, status = 200) => 
   new Response(JSON.stringify(body), {
     status,
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
 
+// Main handler
 Deno.serve(async (req) => {
   try {
+    // Handle CORS 
     if (req.method === "OPTIONS") {
       return new Response("ok", { headers: corsHeaders });
     }
 
+    // Only accept POST
     if (req.method !== "POST") {
       return jsonResponse({ error: "Method not allowed" }, 405);
     }
 
+    // Parse request body
     const body = await req.json().catch(() => null);
     if (!body) {
-      return jsonResponse({ error: "Invalid JSON" }, 400);
+      return jsonResponse({ error: "Invalid JSON in request body" }, 400);
     }
 
     const { user_id, query } = body;
+
+    // Validate required fields
     if (!user_id || !query) {
-      return jsonResponse({ error: "user_id and query required" }, 400);
+      return jsonResponse({ error: "user_id and query are required" }, 400);
     }
+
 
     // Fetch todos
     const { data: todos, error: todosErr } = await supabase
@@ -95,101 +102,156 @@ Deno.serve(async (req) => {
 
     if (todosErr) throw todosErr;
 
+    // Handle empty todos
     if (!todos || todos.length === 0) {
-      return jsonResponse({ reply: "You don't have any todos yet. Create some tasks to get started!" });
+      return jsonResponse({ 
+        reply: "You don't have any todos yet. Create some tasks to get started!" 
+      });
     }
 
     // Calculate statistics
-    const totalTodos = todos.length;
-    const completedTodos = todos.filter(t => t.is_completed).length;
-    const pendingTodos = totalTodos - completedTodos;
+    const todoStats = {
+      total: todos.length,
+      completed: todos.filter((t: any) => t.is_completed).length,
+      pending: todos.filter((t: any) => !t.is_completed).length,
+    };
 
-    // Time periods
+    // Time period calculations
     const today = new Date();
     const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
     const weekStart = new Date(today.getTime() - today.getDay() * 24 * 60 * 60 * 1000);
     const monthStart = new Date(today.getFullYear(), today.getMonth(), 1);
 
-    // Filter by period
-    const todaysTodos = todos.filter(t => new Date(t.created_at) >= todayStart);
-    const thisWeekTodos = todos.filter(t => new Date(t.created_at) >= weekStart);
-    const thisMonthTodos = todos.filter(t => new Date(t.created_at) >= monthStart);
+    const filterByDate = (startDate: Date) => 
+      todos.filter((t: any) => new Date(t.created_at) >= startDate);
 
-    const completedToday = todaysTodos.filter(t => t.is_completed).length;
-    const completedThisWeek = thisWeekTodos.filter(t => t.is_completed).length;
-    const completedThisMonth = thisMonthTodos.filter(t => t.is_completed).length;
+    const todaysTodos = filterByDate(todayStart);
+    const thisWeekTodos = filterByDate(weekStart);
+    const thisMonthTodos = filterByDate(monthStart);
+
+    const countCompleted = (todoList: any[]) => 
+      todoList.filter((t: any) => t.is_completed).length;
+
+    const completedToday = countCompleted(todaysTodos);
+    const completedThisWeek = countCompleted(thisWeekTodos);
+    const completedThisMonth = countCompleted(thisMonthTodos);
 
     // Format todos
-    const formatTodo = (t: any) => {
+    const formatTodo=(t: any) => {
       const date = new Date(t.created_at).toLocaleDateString('en-US', { 
         weekday: 'short', 
         month: 'short', 
         day: 'numeric' 
       });
       const status = t.is_completed ? "DONE" : "PENDING";
-      const notes = t.notes ? ` (${t.notes})` : "";
-      return `${status} - "${t.title}" (${date})${notes}`;
+      const noteStr = t.notes ? `(${t.notes})` : "";
+      return `${status} - "${t.title}" (${date})${noteStr}`;
     };
 
     const recentTodos = todos.slice(0, 10).map(formatTodo).join("\n");
 
-    const completedList = todos
-      .filter(t => t.is_completed && t.updated_at)
-      .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
-      .map(t => {
-        const date = new Date(t.updated_at).toLocaleDateString('en-US', { 
+    // Format completed todos with dates
+    const completedTodosFormatted = todos
+      .filter((t: any) => t.is_completed && t.updated_at)
+      .sort((a: any, b: any) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+      
+      .map((t: any) => {
+        const completedDate = new Date(t.updated_at).toLocaleDateString('en-US', { 
           weekday: 'long', 
           month: 'long', 
           day: 'numeric' 
         });
-        return `- "${t.title}" - ${date}`;
+        return `- "${t.title}" - Completed on ${completedDate}`;
       })
       .join("\n");
 
-    // Build context
-    const completionPercent = ((completedTodos / totalTodos) * 100).toFixed(1);
+    // Build comprehensive context for AI
     const contextData = `
-STATS:
-- Total: ${totalTodos}
-- Completed: ${completedTodos} (${completionPercent}%)
-- Pending: ${pendingTodos}
+STATISTICAL SUMMARY:
+- Total Todos: ${todoStats.total}
+- Completed: ${todoStats.completed} (${((todoStats.completed / todoStats.total) * 100).toFixed(1)}%)
+- Pending: ${todoStats.pending}
 
-TIME PERIODS:
-- Today: ${todaysTodos.length} created (${completedToday} done)
-- This Week: ${thisWeekTodos.length} created (${completedThisWeek} done)
-- This Month: ${thisMonthTodos.length} created (${completedThisMonth} done)
+TIME PERIOD BREAKDOWN:
+- Created Today: ${todaysTodos.length} (Completed: ${completedToday})
+- Created This Week: ${thisWeekTodos.length} (Completed: ${completedThisWeek})
+- Created This Month: ${thisMonthTodos.length} (Completed: ${completedThisMonth})
 
-RECENT TODOS:
+RECENT TODOS (Last 10):
 ${recentTodos}
 
-COMPLETED TODOS:
-${completedList || "None yet"}`;
+RECENTLY COMPLETED TODOS WITH DATES:
+${completedTodosFormatted || "No completed todos yet"}
 
-    const systemPrompt = `You are a helpful Todo Assistant. Answer questions about tasks using ONLY the provided data.
-Be friendly, specific with numbers and dates. Never make up information.`;
+IMPORTANT NOTES:
+- This system tracks completion status (completed/pending) but NOT deleted todos
+- Use the "updated_at" field for completion dates
+- All statistics and dates are provided above - use them directly`;
+
+    const systemPrompt = `You are a highly helpful and conversational Todo Assistant with access to the user's complete task management database.
+
+ANALYSIS FRAMEWORK:
+Automatically identify what the user is asking for:
+- Date/Time queries (when, date, completed on): Focus on completion dates from "RECENTLY COMPLETED TODOS"
+- Count queries (how many, total, count): Use statistics and percentages
+- Time period queries (today, this week, this month): Use "TIME PERIOD BREAKDOWN"
+- Status queries (pending, incomplete, not done): Use completion status data
+- Deletion queries: Explain we track completion, not deletion
+- General queries: Provide relevant overview from all available data
+
+RESPONSE GUIDELINES:
+- Always provide SPECIFIC numbers and dates from the data
+- Be friendly, concise, and conversational
+- Add context to numbers (e.g., "8 out of 15 todos, which is 53%")
+- Use exact dates for completion queries
+- Include percentages for count queries when relevant
+- NEVER make up data - only use what's provided
+- Be encouraging with users who haven't completed many todos yet
+- Answer naturally without mentioning the analysis framework
+
+DATA PROVIDED:
+All necessary data is in the context below. Analyze the user's question and respond appropriately.`;
+
+    const enhancedQuery = `${contextData}\n\nUser Question: ${query}`;
+
 
     // Get AI response
-    const aiResponse = await callOpenAI(systemPrompt, `${contextData}\n\nUser: ${query}`);
+    const aiResponse = await callOpenAI(systemPrompt, enhancedQuery);
 
-    // Save to database (async)
-    generateEmbedding(query).then(embedding => {
+
+    // Generate embedding
+    const embeddingPromise = generateEmbedding(query);
+
+    // Store conversation history 
+    embeddingPromise.then(embedding => {
       supabase.from("ai_chat_history").insert([{
         user_id,
         query,
         response: aiResponse,
         embedding: embedding.length > 0 ? embedding : null,
         todo_context: {
-          stats: { total: totalTodos, completed: completedTodos, pending: pendingTodos },
-          period_breakdown: { today: completedToday, this_week: completedThisWeek, this_month: completedThisMonth },
+          stats: todoStats,
+          todos_count: todos.length,
+          period_breakdown: {
+            today: completedToday,
+            this_week: completedThisWeek,
+            this_month: completedThisMonth,
+          },
         },
-      }]).catch(err => console.error("Failed to save:", err));
+      }]).then(({ error }) => {
+        if (error) console.error("History insert error:", error);
+      });
     });
 
+    // Return response i
     return jsonResponse({ reply: aiResponse });
 
   } catch (err) {
     console.error("Error:", err);
-    const msg = err instanceof Error ? err.message : "Unknown error";
-    return jsonResponse({ error: msg, reply: "Something went wrong. Try again." }, 500);
+    const errorMsg = err instanceof Error ? err.message : "Internal server error";
+    return jsonResponse({ 
+      error: errorMsg,
+      reply: "Sorry, I encountered an error processing your request. Please try again."
+    }, 500);
   }
 });

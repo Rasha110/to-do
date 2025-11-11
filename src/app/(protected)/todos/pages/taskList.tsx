@@ -13,7 +13,6 @@ export default function TodosPage() {
 
   return (
     <div className="p-5">
-      <AddTask tasks={tasks} setTasks={setTasks} />
       <TaskList tasks={tasks} setTasks={setTasks} />
     </div>
   );

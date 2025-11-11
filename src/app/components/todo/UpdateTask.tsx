@@ -18,18 +18,26 @@ export default function UpdateTask({ task, tasks, setTasks }: UpdateTaskProps) {
 
   const handleUpdate = async () => {
     if (!title.trim()) return;
-
+  
     setLoading(true);
-    const { error } = await supabase.from("todos").update({ title }).eq("id", task.id);
-
+    const now = new Date().toISOString(); 
+  
+    const { error } = await supabase
+      .from("todos")
+      .update({ title, updated_at: now })
+      .eq("id", task.id);
+  
     if (error) {
       console.error("Error updating task:", error.message);
     } else {
-      setTasks(tasks.map((t) => (t.id === task.id ? { ...t, title } : t)));
+      setTasks(tasks.map((t) =>
+        t.id === task.id ? { ...t, title, updated_at: now } : t
+      ));
       setIsEditing(false);
     }
     setLoading(false);
   };
+  
 
   useEffect(() => {
     const channel = supabase

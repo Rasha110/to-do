@@ -219,15 +219,18 @@ function UpdateTask({ task, tasks, setTasks }) {
     const handleUpdate = async ()=>{
         if (!title.trim()) return;
         setLoading(true);
+        const now = new Date().toISOString();
         const { error } = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lib$2f$supabase$2d$client$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].from("todos").update({
-            title
+            title,
+            updated_at: now
         }).eq("id", task.id);
         if (error) {
             console.error("Error updating task:", error.message);
         } else {
             setTasks(tasks.map((t)=>t.id === task.id ? {
                     ...t,
-                    title
+                    title,
+                    updated_at: now
                 } : t));
             setIsEditing(false);
         }
@@ -259,7 +262,7 @@ function UpdateTask({ task, tasks, setTasks }) {
                     className: "border p-1 rounded text-blue-600 bg-white outline-none focus:ring-2 focus:ring-blue-500"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/todo/UpdateTask.tsx",
-                    lineNumber: 63,
+                    lineNumber: 71,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$common$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -270,7 +273,7 @@ function UpdateTask({ task, tasks, setTasks }) {
                     children: loading ? "Saving..." : "Save"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/todo/UpdateTask.tsx",
-                    lineNumber: 71,
+                    lineNumber: 79,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$common$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -284,7 +287,7 @@ function UpdateTask({ task, tasks, setTasks }) {
                     children: "Cancel"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/todo/UpdateTask.tsx",
-                    lineNumber: 76,
+                    lineNumber: 84,
                     columnNumber: 11
                 }, this)
             ]
@@ -296,12 +299,12 @@ function UpdateTask({ task, tasks, setTasks }) {
             children: "Edit"
         }, void 0, false, {
             fileName: "[project]/src/app/components/todo/UpdateTask.tsx",
-            lineNumber: 89,
+            lineNumber: 97,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/components/todo/UpdateTask.tsx",
-        lineNumber: 60,
+        lineNumber: 68,
         columnNumber: 5
     }, this);
 }
@@ -341,7 +344,7 @@ const DialogNotes = ({ task, setTasks })=>{
             setIsSaving(false);
             return;
         }
-        // Update  UI 
+        // Update local UI immediately
         setTasks((prevTasks)=>prevTasks.map((t)=>t.id === task.id ? {
                     ...t,
                     notes
@@ -470,13 +473,16 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$protected$29
 const TaskList = ({ tasks, setTasks })=>{
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     const toggleComplete = async (id, current)=>{
+        const now = new Date().toISOString();
         const { error } = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lib$2f$supabase$2d$client$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].from("todos").update({
-            is_completed: !current
+            is_completed: !current,
+            updated_at: now
         }).eq("id", id);
         if (error) return console.error("Toggle error:", error.message);
         setTasks((prev)=>prev.map((task)=>task.id === id ? {
                     ...task,
-                    is_completed: !current
+                    is_completed: !current,
+                    updated_at: now
                 } : task));
     };
     const uniqueTasks = Array.from(new Map(tasks.map((t)=>[
@@ -502,13 +508,13 @@ const TaskList = ({ tasks, setTasks })=>{
                                             children: task.notes
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                                            lineNumber: 53,
+                                            lineNumber: 62,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                                    lineNumber: 45,
+                                    lineNumber: 54,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -523,12 +529,12 @@ const TaskList = ({ tasks, setTasks })=>{
                                                 size: 15
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                                                lineNumber: 64,
+                                                lineNumber: 73,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 67,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$protected$292f$todos$2f$pages$2f$DialogNotes$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -536,7 +542,7 @@ const TaskList = ({ tasks, setTasks })=>{
                                             setTasks: setTasks
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                                            lineNumber: 68,
+                                            lineNumber: 77,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$todo$2f$UpdateTask$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -545,7 +551,7 @@ const TaskList = ({ tasks, setTasks })=>{
                                             setTasks: setTasks
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 79,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$todo$2f$DeleteTask$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -554,19 +560,19 @@ const TaskList = ({ tasks, setTasks })=>{
                                             setTasks: setTasks
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                                            lineNumber: 71,
+                                            lineNumber: 80,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                                    lineNumber: 57,
+                                    lineNumber: 66,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                            lineNumber: 44,
+                            lineNumber: 53,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -582,23 +588,23 @@ const TaskList = ({ tasks, setTasks })=>{
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                            lineNumber: 75,
+                            lineNumber: 84,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, task.id, true, {
                     fileName: "[project]/src/app/components/todo/TaskList.tsx",
-                    lineNumber: 40,
+                    lineNumber: 49,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0)))
         }, void 0, false, {
             fileName: "[project]/src/app/components/todo/TaskList.tsx",
-            lineNumber: 38,
+            lineNumber: 47,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/app/components/todo/TaskList.tsx",
-        lineNumber: 37,
+        lineNumber: 46,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

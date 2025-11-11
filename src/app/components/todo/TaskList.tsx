@@ -18,18 +18,27 @@ type Props = {
 const TaskList: React.FC<Props> = ({ tasks, setTasks }) => {
   const router = useRouter();
 
-  const toggleComplete = async (id: string, current: boolean) => {
-    const { error } = await supabase
-      .from("todos")
-      .update({ is_completed: !current })
-      .eq("id", id);
+ const toggleComplete = async (id: string, current: boolean) => {
+  const now = new Date().toISOString();
+  
+  const { error } = await supabase
+    .from("todos")
+    .update({ 
+      is_completed: !current,
+      updated_at: now 
+    })
+    .eq("id", id);
 
-    if (error) return console.error("Toggle error:", error.message);
+  if (error) return console.error("Toggle error:", error.message);
 
-    setTasks(prev =>
-      prev.map(task => (task.id === id ? { ...task, is_completed: !current } : task))
-    );
-  };
+  setTasks(prev =>
+    prev.map(task => 
+      task.id === id 
+        ? { ...task, is_completed: !current, updated_at: now } 
+        : task
+    )
+  );
+};
 
   const uniqueTasks = Array.from(new Map(tasks.map(t => [t.id, t])).values());
 
