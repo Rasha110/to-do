@@ -5,3 +5,4 @@
 [00:00:27.718] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
 [00:00:50.373] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
 [00:00:50.373] Browser WARN    Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+[00:11:51.042] Server  LOG        Reload env: .env.local
