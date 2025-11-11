@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { supabase } from "../../lib/supabase-client";
 import Button from "../../components/common/Button";
-import { getAuthSchema } from "../../lib/schema/schema";
+import {getAuthSchema } from "../../lib/schema/schema";
 import * as yup from "yup";
 
 interface AuthFormProps {
