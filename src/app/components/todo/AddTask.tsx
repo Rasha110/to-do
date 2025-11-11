@@ -18,7 +18,7 @@ export default function AddTask({ tasks, setTasks }: AddTaskProps) {
     reset,
     formState: { errors },
   } = useForm<FormInputs>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema) as any,
   });
   const addTask = async (title: string) => {
     const {
