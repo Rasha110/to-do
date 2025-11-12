@@ -1,3 +1,7 @@
+
+  
+
+
   /** @type {import('next').NextConfig} */
   const nextConfig = {
     reactStrictMode: true,
@@ -5,7 +9,7 @@
       turbo: true, // Turbopack dev server
     },
   };
-    
+  
     // Exclude Supabase functions from the build
     webpack: (config, { isServer }) => {
       if (isServer) {
@@ -24,4 +28,6 @@
       return config;
     }
   
-export default nextConfig;
+  
+  export default nextConfig;
+  
